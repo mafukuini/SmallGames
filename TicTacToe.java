@@ -30,18 +30,24 @@ public class TicTacToe {
 	
 	
 	public static void addresses(){
-	    //when called, this method will just print
+		
+	    //When called, this method will just print
 	    //the addresses of the cells to the screen.
-		//the addresses are used to move the avatars
-		//("X" and "0" are the avatars)
+		//Since it is a command line game, the characters/avatars
+		//can only be moved using the addresses.
+		
+		//How it works? You should key in two numbers.
+		//The two numbers are the addresses below, one which acts as 
+		//the From address and the other one is the
+		//To address.
 	   
-	    System.out.println("¡-----—¡---—--¡--—---¡");
+	    System.out.println("Â¡-----â€”Â¡---â€”--Â¡--â€”---Â¡");
 	    System.out.println("|   1  |   2  |   3  |");
-	    System.out.println("|------+––--–-+--—---");
+	    System.out.println("|------+â€“â€“--â€“-+--â€”---");
 	    System.out.println("|   4  |   5  |   6  |");
-	    System.out.println("| -----+–––---+--—---");
+	    System.out.println("| -----+â€“â€“â€“---+--â€”---");
 	    System.out.println("|   7  |   8  |   9  |");
-	    System.out.println("!-----—!-----—!----—!");
+	    System.out.println("!-----â€”!-----â€”!----â€”!");
 	}
 	
 	    
@@ -50,21 +56,23 @@ public class TicTacToe {
 		//this function does all the magic.
 		//Actually, nothing close to that. The function(or method) 
 		//is used to freshly display the updated avatar
-		//("X" , "_" and "0" are the avatars) every time a valid move is made.
-	    System.out.println("¡------—¡------—¡----—¡");
+		//("X" , "_" and "0" are the avatars) every time a move is made.
+		
+	    System.out.println("Â¡------â€”Â¡------â€”Â¡----â€”Â¡");
 	    System.out.println("|   "+position[0]+"   |   "+position[1]+"   |  "+position[2]+"  |");
-	    System.out.println("|-------+–--––--+----—|");
+	    System.out.println("|-------+â€“--â€“â€“--+----â€”|");
 	    System.out.println("|  "+position[3]+"    |    "+position[4]+"  |  "+position[5]+"  |");
-	    System.out.println("|-------+–-–---–+----—|");
+	    System.out.println("|-------+â€“-â€“---â€“+----â€”|");
 	    System.out.println("|    "+position[6]+"  |   "+position[7]+"   |  "+position[8]+"  |");
-        System.out.println("!----—--!------—!----—!");
+        System.out.println("!----â€”--!------â€”!----â€”!");
 	}
 	   
 	    
 	public static boolean checkWinner(){
+		
 	    //this function returns a boolean value after 
 	    //checking whether there is a winner, 
-	  	//given the conditions in the brackets.
+	  	//given the conditions in the "if" statements.
 	        
 	    if((position[0]  ==  position[4]&&position[4]  ==  position[8]&&position[8]  ==  'X')||(position[0]  ==  position[3]&&position[3]  ==  position[6]&&position[6]  ==  'X')||(position[2] == position[5]&&position[5] == position[8]&&position[8] == 'X')||(position[2] == position[4]&&position[4] == position[6]&&position[6] == 'X')||(position[1] == position[4]&&position[4] == position[7]&&position[7] == 'X')||(position[3] == position[4]&&position[4] == position[5]&&position[5] == 'X')){
 	        System.out.println("\"X\" won");
@@ -96,7 +104,7 @@ public class TicTacToe {
                         position[moveFrom-1]=position[moveTo-1];
                         position[moveTo-1]=temp;
                      }else{
-                      System.out.println("orea rada acha pupa");
+                      System.out.println("Not your turn");
                       count--;
                     }
                  }else{
