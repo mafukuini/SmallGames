@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TicTacToe {
+public class SimpleGame {
 	
     static char [] position = {'X','X','X','_','_','_','O','O','O'};
     static private int count = 0;
