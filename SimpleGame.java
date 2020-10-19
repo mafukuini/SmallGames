@@ -64,17 +64,17 @@ public class SimpleGame {
 	public static boolean checkWinner(){
 	    //this function returns a boolean value after 
 	    //checking whether there is a winner, 
-	  	//given the conditions in the brackets.
+	    //given the conditions in the brackets.
+	    int x = 0;
 	        
-	    if((position[0]  ==  position[4]&&position[4]  ==  position[8]&&position[8]  ==  'X')||(position[0]  ==  position[3]&&position[3]  ==  position[6]&&position[6]  ==  'X')||(position[2] == position[5]&&position[5] == position[8]&&position[8] == 'X')||(position[2] == position[4]&&position[4] == position[6]&&position[6] == 'X')||(position[1] == position[4]&&position[4] == position[7]&&position[7] == 'X')||(position[3] == position[4]&&position[4] == position[5]&&position[5] == 'X')){
+	    if(((x == 0 || x == 3 || x == 6)&&(position[x]  ==  position[x+1]&&position[x+1]  ==  position[x+2]&&position[x+2]  ==  'X'))||((x == 0 || x == 1 || x == 2)&&(position[x]  ==  position[x+3]&&position[x+3]  ==  position[x+6]&&position[x+6]  ==  'X')||(position[2] == position[4]&&position[4] == position[6]&&position[6] == 'X')||(position[0] == position[4]&&position[4] == position[8]&&position[8] == 'X')){
 	        System.out.println("\"X\" won");
 	        return true;
-	    }else if((position[0] == position[4]&&position[4] == position[8]&&position[8] == 'O')||(position[0] == position[3]&&position[3] == position[6]&&position[6] == 'O')||(position[2] == position[5]&&position[5] == position[8]&&position[8] == 'O')||(position[2] == position[4]&&position[4] == position[6]&&position[6] == 'O')||(position[1] == position[4]&&position[4] == position[7]&&position[7] == 'O')||(position[3] == position[4]&&position[4] == position[5]&&position[5] == 'O')){
-	        System.out.println("\"O\" won");
+	    } else if(((x == 0 || x == 3 || x == 6)&&(position[x]  ==  position[x+1]&&position[x+1]  ==  position[x+2]&&position[x+2]  ==  'O'))||((x == 0 || x == 1 || x == 2)&&(position[x]  ==  position[x+3]&&position[x+3]  ==  position[x+6]&&position[x+6]  ==  'O')||(position[2] == position[4]&&position[4] == position[6]&&position[6] == 'O')||(position[0] == position[4]&&position[4] == position[8]&&position[8] == 'O')){
+		System.out.println("\"O\" won");
 	        return true;
 	    }else
 	        return false;
-	 
 	}
 	    
 	    
